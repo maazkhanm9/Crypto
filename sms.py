@@ -22,6 +22,12 @@ def getBitcoinPrice():
 
 print(getBitcoinPrice())
 
+def getEtheriumPrice():
+    getPrice = requests.get('https://api.bybit.com/spot/v3/public/quote/ticker/price?symbol=ETHUSDT').json()
+    ethPrice = getPrice['result']['price']
+    return ethPrice
+print(getEtheriumPrice())
+
 
 
 while True:
